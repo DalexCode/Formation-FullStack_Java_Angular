@@ -19,8 +19,6 @@ Télécharger depuis https://adoptium.net/
 Ou utiliser Chocolatey
 choco install temurin17
 
-text
-
 ### Installation macOS
 
 Avec Homebrew
@@ -28,8 +26,6 @@ brew install openjdk@17
 
 Ajouter au PATH
 echo 'export PATH="/opt/homebrew/opt/openjdk@17/bin:$PATH"' >> ~/.zshrc
-
-text
 
 ### Installation Linux
 
@@ -40,14 +36,10 @@ sudo apt install openjdk-17-jdk
 CentOS/RHEL
 sudo yum install java-17-openjdk-devel
 
-text
-
 ### Vérification
 
 java -version
 javac -version
-
-text
 
 ## 2. IDE - IntelliJ IDEA
 
@@ -75,8 +67,6 @@ Theme: Darcula ou IntelliJ Light
 Settings → Editor → Font
 Font: JetBrains Mono, Size: 14
 
-text
-
 ## 3. Node.js et npm
 
 ### Installation
@@ -91,14 +81,10 @@ Linux
 curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
 sudo apt-get install -y nodejs
 
-text
-
 ### Vérification
 
 node --version
 npm --version
-
-text
 
 ### Configuration npm
 
@@ -110,8 +96,6 @@ npm install -g @angular/cli@latest
 
 Vérifier Angular CLI
 ng version
-
-text
 
 ## 4. Base de Données
 
@@ -125,14 +109,10 @@ Aucune installation requise - embarquée dans Spring Boot
 
 choco install postgresql
 
-text
-
 #### macOS
 
 brew install postgresql
 brew services start postgresql
-
-text
 
 #### Linux
 
@@ -142,8 +122,6 @@ sudo apt install postgresql postgresql-contrib
 Démarrer le service
 sudo systemctl start postgresql
 sudo systemctl enable postgresql
-
-text
 
 #### Configuration PostgreSQL
 
@@ -159,8 +137,6 @@ CREATE DATABASE formation_db OWNER devuser;
 -- Donner les privilèges
 GRANT ALL PRIVILEGES ON DATABASE formation_db TO devuser;
 
-text
-
 ## 5. Contrôle de Version - Git
 
 ### Installation
@@ -174,8 +150,6 @@ brew install git
 Linux
 sudo apt install git
 
-text
-
 ### Configuration Globale
 
 git config --global user.name "Votre Nom"
@@ -183,8 +157,6 @@ git config --global user.email "votre.email@example.com"
 git config --global init.defaultBranch main
 git config --global core.autocrlf input # Linux/Mac
 git config --global core.autocrlf true # Windows
-
-text
 
 ### Configuration SSH (Recommandé)
 
@@ -199,7 +171,6 @@ Copier la clé publique
 cat ~/.ssh/id_ed25519.pub
 
 Coller dans GitHub → Settings → SSH Keys
-text
 
 ## 6. Docker (Optionnel - Phases Avancées)
 
@@ -215,8 +186,6 @@ docker --version
 docker-compose --version
 docker run hello-world
 
-text
-
 ## 🔧 Configuration d'Environnement
 
 ### Variables d'Environnement Windows
@@ -224,8 +193,6 @@ text
 Ouvrir PowerShell en administrateur
 [Environment]::SetEnvironmentVariable("JAVA_HOME", "C:\Program Files\Eclipse Adoptium\jdk-17.0.x-hotspot", "Machine")
 [Environment]::SetEnvironmentVariable("PATH", $env:PATH + ";%JAVA_HOME%\bin", "Machine")
-
-text
 
 ### Variables d'Environnement macOS/Linux
 
@@ -240,8 +207,6 @@ export PATH=$MAVEN_HOME/bin:$PATH
 
 Recharger le fichier
 source ~/.bashrc # ou ~/.zshrc
-
-text
 
 ## ✅ Script de Vérification
 
@@ -311,14 +276,10 @@ fi
 echo "================================================"
 echo "✅ Vérification terminée!"
 
-text
-
 ### Exécuter le script
 
 chmod +x verify_installation.sh
 ./verify_installation.sh
-
-text
 
 ## 🏗️ Workspace Recommandé
 
@@ -335,8 +296,6 @@ text
 ├── books/
 ├── tutorials/
 └── documentation/
-
-text
 
 ### Configuration IntelliJ
 
@@ -355,8 +314,6 @@ code --install-extension angular.ng-template
 code --install-extension ms-azuretools.vscode-docker
 code --install-extension eamodio.gitlens
 
-text
-
 ### Outils en ligne de commande
 
 HTTPie pour tester les APIs
@@ -366,7 +323,6 @@ Tree pour visualiser l'arborescence
 Windows: choco install tree
 macOS: brew install tree
 Linux: sudo apt install tree
-text
 
 ## 🚨 Résolution des Problèmes Courants
 
@@ -378,16 +334,12 @@ echo $JAVA_HOME
 Si vide, définir manuellement
 export JAVA_HOME=/path/to/jdk
 
-text
-
 ### npm : Erreurs de permissions
 
 Configurer npm pour éviter sudo
 mkdir ~/.npm-global
 npm config set prefix '~/.npm-global'
 echo 'export PATH=~/.npm-global/bin:$PATH' >> ~/.bashrc
-
-text
 
 ### Angular CLI : Command not found
 
@@ -396,15 +348,11 @@ npm uninstall -g @angular/cli
 npm cache clean --force
 npm install -g @angular/cli@latest
 
-text
-
 ### PostgreSQL : Connection refused
 
 Démarrer le service
 sudo systemctl start postgresql # Linux
 brew services start postgresql # macOS
-
-text
 
 ## 🎯 Test Final
 
@@ -425,8 +373,6 @@ text
 
 3. Test Docker
    docker run hello-world
-
-text
 
 ## 🏆 Validation Complète
 
