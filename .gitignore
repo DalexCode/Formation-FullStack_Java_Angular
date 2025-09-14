@@ -1,0 +1,33 @@
+# Fichiers de compilation Java
+*.class
+*.jar
+*.war
+*.ear
+
+# IDE
+.idea/
+.vscode/
+*.iml
+
+# Maven/Gradle
+target/
+build/
+.gradle/
+
+# Angular/Node
+node_modules/
+dist/
+.angular/
+
+# Environnement
+.env
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Fichiers personnels temporaires
+temp/
+draft/
+notes_privees/
